@@ -1,4 +1,108 @@
-h1,
-h2 {
-  color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+
+  --main-font: 'Roboto', sans-serif;
+  --title-font: 'Permanent Marker', cursive;
+
+  --light-blue: #1C6E8C;
+  --dark-blue: #274156;
+  --brown: #605856;
+  --light-grey: #D0CCD0;
+  --white: #FBFCFF;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+  font-family: var(--title-font);
+  color: var(--white)
+}
+
+h2 {
+  text-align: center;
+}
+body {
+  font-family: var(--main-font);
+  background-color: var(--dark-blue);
+}
+
+nav {
+  /* display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px; */
+  background-color: var(--light-grey)
+}
+
+nav div {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  text-decoration: none;
+  transition: background-color .3s, color .3s;
+}
+
+nav div:hover {
+  background-color: var(--dark-blue);
+  color: var(--white)
+}
+
+main {
+  text-align: center;
+}
+
+main div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+article {
+  width: 300px;
+  border: 2px solid #605856;
+  height: 250px;
+  margin: 10px;
+}
+
+.content_img{
+  position: relative;
+  width: 296px;
+  height: 246px;
+  float: left;
+  margin-right: 10px;
+}
+
+.content_img div{
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ /* top: 40%;
+ bottom: 40%; */
+ background: black;
+ color: white;
+ margin-bottom: 5px;
+ font-family: var(--title-font);
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+}
+
+.content_img:hover{
+  cursor: pointer;
+}
+
+.content_img:hover div{
+  width: 150px;
+  padding: 8px 15px;
+  visibility: visible;
+  opacity: 0.9;
+  background-color: black;
+}
+
