@@ -1,4 +1,4 @@
-1. url
+1. url - https://3rdpartyapiproject.netlify.app/
 2. stretch goals
     1. add popular page
     2. media query resizing
